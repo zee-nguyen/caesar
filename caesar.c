@@ -7,7 +7,7 @@ int main(int argc, string argv[])
 {
     //check if argc is 2
     if (argc != 2) {
-        printf("missing command-line argument\n");
+        printf("./caesar k\n");
         return 1;
     }
 
@@ -25,26 +25,27 @@ int main(int argc, string argv[])
     //  - shift plaintext char by key
 
     if (p != NULL) {
+    printf("ciphertext: ");
 
         for (int i = 0, n = strlen(p); i < n; i++) {
 
             //check if alphabetic
-            if (isalpha(p[i]) == true) {
+            if (isalpha(p[i])) {
 
                 //preserve the case
                 //if uppercase
                 if (isupper(p[i])) {
                     int textpos = p[i] - 'A';
                     int cipherpos = (textpos + k) % 26;
-                    int c = cipherpos + 65;
+                    int c = cipherpos + 'A';
                     printf("%c", (char) c);
 
                 }
                 //if lowercase
-                if (islower(p[i])) {
+                else {
                     int textpos = p[i] - 'a';
                     int cipherpos = (textpos + k) % 26;
-                    int c = cipherpos + 97;
+                    int c = cipherpos + 'a';
                     printf("%c", (char) c);
                 }
 
@@ -53,7 +54,8 @@ int main(int argc, string argv[])
                 printf("%c", p[i]);
             }
         }
-        // printf("ciphertext: ");
+
+        printf("\n");
     }
     return 0;
 }

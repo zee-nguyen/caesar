@@ -49,11 +49,10 @@ Pseudocode
     - printf("plaintext: ");
     - get_string()
 
-4. iterate through the plaintext string and for each char in the plaintext string
- - if alphabetic
- - preserve the case
- - shift plaintext char by key
-
+4. iterate through each char in the plaintext and for each char in the plaintext string
+    - if alphabetic (shift letters only, everything else is preserved)
+    - preserve the case
+    - shift plaintext char by key
 
     * some functions to use
     shift letters only: isalpha
@@ -66,7 +65,7 @@ Pseudocode
 
     * alphabet wraparound
     - start with: ASCII values
-    - encipher: alphabetical inbox
+    - encipher: alphabetical index
     - print: ASCII values
 
     ASCII --> alphabetical?
@@ -74,4 +73,6 @@ Pseudocode
     cap/ low cap letters?
 
 5. print ciphertext
+    - output ciphertext with a newline
+    - exit, returning 0 from main
 

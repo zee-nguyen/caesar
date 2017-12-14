@@ -68,9 +68,9 @@ Pseudocode
     - encipher: alphabetical index
     - print: ASCII values
 
-    ASCII --> alphabetical?
+    * ASCII --> alphabetical?
     alphabetical -> ASCII?
-    cap/ low cap letters?
+    also consider cap/ low cap letters?
 
 5. print ciphertext
     - output ciphertext with a newline
